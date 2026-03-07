@@ -8,7 +8,8 @@ Nyanopan is a full-featured ecommerce website built with Laravel. It includes ev
 
 ## Features
 
-- **User Management**: User registration, login, and profile management
+- **Registration & Login**: Secure user authentication with registration and login functionality
+- **User Management**: User profile management
 - **Product Catalog**: Browse products by category
 - **Shopping Cart**: Add products to cart, update quantities, remove items
 - **Checkout System**: Complete order checkout process

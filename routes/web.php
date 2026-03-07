@@ -1,20 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-// CORRECT NAMESPACES — your controllers are in "frontend" (lowercase f)
-use App\Http\Controllers\frontend\FrontController;
-use App\Http\Controllers\frontend\CartController;
-use App\Http\Controllers\frontend\CheckoutController;
-use App\Http\Controllers\frontend\UserController;
-use App\Http\Controllers\frontend\contactComplains;   // note: lowercase 'c' if filename is like that
-
-// Admin controllers (folder is "Admin" → capital A)
-use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
 use App\Http\Controllers\Admin\CategoriesController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\OrderController;
+// CORRECT NAMESPACES — your controllers are in "frontend" (lowercase f)
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\frontend\CartController;   // note: lowercase 'c' if filename is like that
+// Admin controllers (folder is "Admin" → capital A)
+use App\Http\Controllers\frontend\CheckoutController;
+use App\Http\Controllers\frontend\contactComplains;
+use App\Http\Controllers\frontend\FrontController;
+use App\Http\Controllers\frontend\UserController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 // ==================== PUBLIC / FRONTEND ROUTES ====================
 Route::get('/', [FrontController::class, 'mainpage'])->name('home');
@@ -36,7 +35,7 @@ Route::post('sendMessage', [contactComplains::class, 'submitForm']);
 Route::view('about', 'frontend.about')->name('about');
 
 // Auth Routes
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 // ==================== AUTHENTICATED USER ROUTES ====================
 Route::middleware(['auth'])->group(function () {
