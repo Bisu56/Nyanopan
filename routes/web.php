@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\CategoriesController;
 // CORRECT NAMESPACES — your controllers are in "frontend" (lowercase f)
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\FrontendController as AdminFrontendController;
+use App\Http\Controllers\Admin\frontendController as AdminFrontendController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\frontend\CartController;   // note: lowercase 'c' if filename is like that
