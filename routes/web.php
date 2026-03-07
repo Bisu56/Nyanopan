@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // ==================== ADMIN ROUTES ====================
-Route::middleware(['auth', 'isAdmin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'isAdmin'])->name('admin.')->group(function () {
 
     Route::get('/dashboard', [AdminFrontendController::class, 'index'])->name('dashboard');
 
