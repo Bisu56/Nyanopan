@@ -1,29 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-default navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top" style="background: linear-gradient(135deg, #1a5f2a 0%, #2e7d32 50%, #43a047 100%);">
   <div class="container-fluid  navbar-default ">
-     <a class="navbar-brand" href="{{url('/')}}">My-Shop</a>
+     <a class="navbar-brand text-white fw-bold" href="{{url('/')}}">🌿 Nyanopan</a>
    
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
      </button>
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-           <a class="nav-link px-3 active" aria-current="page" href="/">Home</a>
-           <a class="nav-link  px-3 " href="{{url('category')}}">Categories</a>
-           <a class="nav-link  px-3 " href="{{url('contact')}}">Contact</a>
-           <a class="nav-link  px-3 " href="{{url('about')}}">About</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="navbar-nav ms-auto">
+            <a class="nav-link px-3 active text-white" aria-current="page" href="/">Home</a>
+            <a class="nav-link px-3 text-white" href="{{url('category')}}">Categories</a>
+            <a class="nav-link px-3 text-white" href="{{url('contact')}}">Contact</a>
+            <a class="nav-link px-3 text-white" href="{{url('about')}}">About</a>
+         </div>
         <div class="navbar-nav ms-auto justify-content-center">
          
 
            @guest
            @if (Route::has('login'))
            <li class="nav-item">
-              <a class="nav-link cartblack" id="loginblack" href="{{ route('login') }}">{{ __('Login') }}</a>
+              <a class="nav-link text-white" id="loginblack" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
             @endif
             @if (Route::has('register'))
             <li class="nav-item">
-               <a class="nav-link cartblack" id="loginblack"  href="{{ route('register') }}">{{ __('Register') }}</a>
+               <a class="nav-link text-white" id="loginblack"  href="{{ route('register') }}">{{ __('Register') }}</a>
             </li>
             @endif
             @else
@@ -37,9 +37,9 @@
                   </div>
                </form>
              </div>
-            <a class="cartblack nav-link" href="{{url('cart')}}"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="nav-link text-white" href="{{url('cart')}}"><i class="fa-solid fa-cart-shopping"></i></a>
             <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                <img
             src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
             class="rounded-circle"
