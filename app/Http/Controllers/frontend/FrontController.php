@@ -29,7 +29,7 @@ class FrontController extends Controller
     {
         if (Category::where('slug', $slug)->exists()) {
             $category = Category::where('slug', $slug)->first();
-            $product = Product::where('cate_id', $category->id)->where('status', '0')->get();
+            $product = Product::where('cate_id', $category->id)->get();
 
             return view('frontend.products.index', compact('category', 'product'));
         } else {
@@ -70,7 +70,7 @@ class FrontController extends Controller
         if ($search_product != '') {
             $product = Product::where('name', 'LIKE', "%$search_product%")->first();
             if ($product) {
-                return redirect('all-category/'.$product->category->slug.'/'.$product->slug);
+                return redirect('view-category/'.$product->category->slug.'/'.$product->slug);
             } else {
                 return redirect()->back()->with('status', 'No Products Matched your Search');
             }

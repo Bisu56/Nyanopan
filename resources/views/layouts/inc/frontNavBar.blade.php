@@ -29,14 +29,14 @@
             @else
 
             <div class="input-group hello">
-               <form class="d-flex bg-transparent w-100" action="{{url('searchProduct')}}" class="form-control" method="POST">
-                  @csrf
-                  <div class="input-group">
-                     <input name="product_name" required type="search" id="search_product" class="form-control bg-dark rounded-pill outline-none shadow-none border-0 "  placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                     <button class="btn" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
-                  </div>
-               </form>
-             </div>
+                <form class="d-flex bg-transparent w-100" action="{{url('searchProduct')}}" method="POST">
+                   @csrf
+                   <div class="input-group">
+                      <input name="product_name" required type="search" id="search_product" class="form-control bg-light rounded-pill outline-none shadow-none border-0 text-dark" placeholder="Search...">
+                      <button class="btn btn-light rounded-pill ms-1" type="submit"><i class="fa-solid fa-magnifying-glass text-success"></i></button>
+                   </div>
+                </form>
+              </div>
             <a class="nav-link text-white" href="{{url('cart')}}"><i class="fa-solid fa-cart-shopping"></i></a>
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
