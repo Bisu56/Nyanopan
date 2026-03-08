@@ -2,15 +2,111 @@
 
 
 @section('title')
-   Nyanopan
+   About Us - Nyanopan
 @endsection
 
 
 @section('content')
 <div class="py-5"></div>
-<div class="container p-2 my-2">
-        <h1 class="p-2"> Our Nyanopan</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae temporibus quidem corrupti excepturi odio ullam possimus perspiciatis quia culpa, cumque labore ipsum cum consequatur similique obcaecati porro, harum nobis repudiandae eos, distinctio aut sequi adipisci id magnam! Sunt quidem quas nesciunt explicabo, itaque quae libero maxime similique aliquam optio reprehenderit consequuntur magni molestiae aspernatur magnam recusandae at repellat, aliquid hic, neque corrupti soluta numquam! Molestias eveniet quos recusandae! Molestias, ut possimus voluptatum quas ducimus adipisci iure alias corporis odit suscipit distinctio. Provident dolorem iure, libero sapiente aliquid adipisci magnam, nemo aliquam iusto laboriosam quo ut laudantium natus saepe voluptas veritatis quas ratione nobis vitae, itaque incidunt possimus ullam! Dolorum culpa sit nobis dolor, dicta rem labore hic. Impedit perferendis, minima, fuga animi deserunt dignissimos error totam possimus magni nemo aspernatur neque deleniti aperiam assumenda, corporis cupiditate? Exercitationem illum iste, mollitia, ea accusamus ipsa corporis modi voluptate aut dolor quia quae odio beatae aperiam, est autem deserunt ad! Aut non, libero dignissimos soluta molestiae numquam eius illum veniam deleniti totam omnis quos ut quasi praesentium perspiciatis laborum dolor modi ullam nobis aspernatur, doloremque deserunt quas quo facere. Dolore aliquam voluptate, reprehenderit expedita vel odio ipsam porro eveniet a amet iste soluta saepe quidem, praesentium optio earum! Quis aperiam expedita vitae est distinctio neque nemo delectus veniam laudantium? Sint, aliquid pariatur soluta adipisci optio neque aspernatur? Quaerat, ea natus! Ut minus harum rerum tempora corrupti odit veniam asperiores perspiciatis eligendi illum quas dolorem porro saepe animi enim cumque in perferendis quibusdam ipsa, suscipit maiores vero. Assumenda vero laboriosam nulla alias ad ea ut nihil earum excepturi rerum magnam, ullam sed itaque magni aut aspernatur sit tempora perferendis repudiandae cum quibusdam delectus ipsam dolorem. Totam sint odit culpa, repellendus reiciendis rerum tempore ratione. Reprehenderit optio dolorem quod repellendus animi nihil, aliquam quos nobis expedita rerum itaque quo velit, assumenda, repellat dignissimos voluptas pariatur deleniti doloribus facilis. Incidunt quo, odio rem architecto, quam laboriosam sint aut deleniti enim facilis illo minus laudantium commodi illum, nulla perspiciatis totam perferendis exercitationem possimus sapiente. Inventore id repellat eaque illo reprehenderit natus esse adipisci ad, recusandae consequuntur dignissimos doloremque quibusdam ipsam culpa facilis asperiores minima accusamus error officiis molestias vel vero at assumenda possimus! Sunt odio, dicta ipsa quasi magnam aliquid, temporibus molestiae explicabo illo expedita nobis eum ad suscipit maiores aut nihil voluptatum! Quasi, vero eligendi nihil odit aliquid itaque ipsa. Voluptas, soluta sit. Dolorem, id, et necessitatibus a eaque maiores fuga doloribus reiciendis perferendis ad sit. Praesentium ab voluptates voluptate maiores ipsa deserunt itaque pariatur quo quia, aut repellat impedit, optio nam veniam. Quibusdam consectetur ad necessitatibus dicta incidunt neque doloribus, cumque repudiandae praesentium blanditiis vero dolorem facere rerum, enim magnam quasi quisquam iure! Atque, quia suscipit voluptate nihil culpa dolorum. Optio vero voluptate modi eaque earum dolores accusamus qui assumenda, impedit ratione odio quos saepe ipsam beatae sed veniam neque aspernatur dolor perferendis aliquam repellendus illum nisi explicabo labore. Optio quae omnis, dolorem dignissimos quas odio quam excepturi placeat, quo quos magni in, sed eos?</p>
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <img src="{{asset('images/nyanopan-logo.png')}}" alt="Nyanopan" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Nyanopan'">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="fw-bold mb-4">Welcome to Nyanopan</h1>
+                <p class="lead text-muted">
+                    Your one-stop destination for quality products at unbeatable prices.
+                </p>
+                <p>
+                    At Nyanopan, we believe in providing our customers with the best shopping experience possible. 
+                    Founded with a vision to revolutionize online shopping, we curate the finest selection of products 
+                    across various categories to meet your every need.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-shopping-bag fa-3x text-success"></i>
+                        </div>
+                        <h5>Quality Products</h5>
+                        <p class="text-muted">We ensure every product meets our high quality standards.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-truck fa-3x text-success"></i>
+                        </div>
+                        <h5>Fast Delivery</h5>
+                        <p class="text-muted">Quick and reliable shipping to your doorstep.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-headset fa-3x text-success"></i>
+                        </div>
+                        <h5>24/7 Support</h5>
+                        <p class="text-muted">We're always here to help you with any questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card bg-success text-white border-0">
+                    <div class="card-body py-5 text-center">
+                        <h2 class="mb-3">Our Mission</h2>
+                        <p class="mb-0 fs-5">
+                            To provide exceptional products and outstanding customer service, 
+                            making every shopping experience with Nyanopan a memorable one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold mb-4">Why Choose Nyanopan?</h2>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Wide range of products</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Competitive pricing</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Secure payment options</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Easy returns & refunds</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Regular discounts & offers</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Trusted by thousands</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h3 class="fw-bold mb-4">Get In Touch</h3>
+                <p class="text-muted mb-4">Have questions? We'd love to hear from you!</p>
+                <a href="{{url('contact')}}" class="btn btn-success btn-lg px-5">Contact Us</a>
+            </div>
+        </div>
     </div>
+</section>
+
 <div class="py-5"></div>
 @endsection
