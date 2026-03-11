@@ -24,7 +24,7 @@ Route::get('/cart', [CartController::class, 'viewCartApi']);
 Route::get('/api/my-order', [UserController::class, 'indexApi']);
 
 // Authenticated API Routes
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
     Route::post('/add-to-cart', [CartController::class, 'addProduct']);
     Route::post('/delete-cart-item', [CartController::class, 'deleteProduct']);
     Route::post('/update-cart', [CartController::class, 'updateCart']);
