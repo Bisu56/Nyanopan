@@ -78,4 +78,12 @@ class FrontController extends Controller
             return redirect()->back();
         }
     }
+
+    // API Methods
+    public function getCategory()
+    {
+        $category = Category::latest()->get();
+
+        return response()->json(['category' => $category]);
+    }
 }
