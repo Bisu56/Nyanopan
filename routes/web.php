@@ -1,26 +1,18 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoriesController;
-// CORRECT NAMESPACES — your controllers are in "frontend" (lowercase f)
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\frontendController as AdminFrontendController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\frontend\CartController;   // note: lowercase 'c' if filename is like that
-// Admin controllers (folder is "Admin" → capital A)
+use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\contactComplains;
 use App\Http\Controllers\frontend\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
-// All frontend routes are handled by React Router
-Route::get('/{any}', function () {
-    return view('welcome');
-})->where('any', '.*');
-
-// Auth Routes
+// Auth Routes - must be before catch-all
 Auth::routes();
 
 // ==================== AUTHENTICATED USER ROUTES ====================
@@ -66,3 +58,9 @@ Route::middleware(['auth', 'isAdmin'])->name('admin.')->group(function () {
     // Contact Messages
     Route::get('/message', [contactComplains::class, 'viewcomplains'])->name('messages');
 });
+
+// ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
+// All other routes are handled by React Router
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any', '^(?!api).*$');
