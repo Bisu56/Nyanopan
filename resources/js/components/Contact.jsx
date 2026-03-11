@@ -132,10 +132,9 @@ const Contact = () => {
           </div>
         </div>
       </main>
-      <Footer>
+      <Footer />
+    </div>
   );
 };
 
 export default Contact;
- />
-    </div
