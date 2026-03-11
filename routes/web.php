@@ -10,29 +10,15 @@ use App\Http\Controllers\frontend\CartController;   // note: lowercase 'c' if fi
 // Admin controllers (folder is "Admin" → capital A)
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\contactComplains;
-use App\Http\Controllers\frontend\FrontController;
 use App\Http\Controllers\frontend\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// ==================== PUBLIC / FRONTEND ROUTES ====================
-Route::get('/', [FrontController::class, 'mainpage'])->name('home');
-
-Route::get('/category', [FrontController::class, 'category'])->name('category');
-
-Route::get('view-category/{slug}', [FrontController::class, 'viewCategory']);
-Route::get('view-category/{cate_slug}/{prod_slug}', [FrontController::class, 'productView']);
-Route::get('view-product/{prod_slug}', [FrontController::class, 'eachProdView']);
-
-Route::post('add-to-cart', [CartController::class, 'addProduct']);
-Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
-Route::post('update-cart', [CartController::class, 'updateCart']);
-Route::post('searchProduct', [FrontController::class, 'searchProducts']);
-
-Route::get('contact', [contactComplains::class, 'index']);
-Route::post('sendMessage', [contactComplains::class, 'submitForm']);
-
-Route::view('about', 'frontend.about')->name('about');
+// ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
+// All frontend routes are handled by React Router
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any', '.*');
 
 // Auth Routes
 Auth::routes();
