@@ -64,6 +64,28 @@ class FrontController extends Controller
         }
     }
 
+    public function productCatalog(Request $request)
+    {
+        $category = Category::latest()->get();
+
+        $product = Product::query();
+
+        if ($request->has('category') && $request->category != '') {
+            $cat = Category::where('slug', $request->category)->first();
+            if ($cat) {
+                $product = $product->where('cate_id', $cat->id);
+            }
+        }
+
+        if ($request->has('search') && $request->search != '') {
+            $product = $product->where('name', 'LIKE', '%'.$request->search.'%');
+        }
+
+        $product = $product->latest()->paginate(12);
+
+        return view('frontend.products.catalog', compact('product', 'category'));
+    }
+
     public function searchProducts(Request $request)
     {
         $search_product = $request->product_name;
