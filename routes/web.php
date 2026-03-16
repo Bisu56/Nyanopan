@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\contactComplains;
+use App\Http\Controllers\frontend\FrontController;
 use App\Http\Controllers\frontend\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,15 @@ Route::middleware(['auth', 'isAdmin'])->name('admin.')->group(function () {
     // Contact Messages
     Route::get('/message', [contactComplains::class, 'viewcomplains'])->name('messages');
 });
+
+// ==================== PUBLIC / FRONTEND ROUTES ====================
+Route::get('/', [FrontController::class, 'mainpage'])->name('home');
+Route::get('/category', [FrontController::class, 'category']);
+Route::get('/products/catalog', [FrontController::class, 'productCatalog'])->name('products.catalog');
+Route::get('/view-category/{slug}', [FrontController::class, 'viewCategory']);
+Route::get('/view-category/{cate_slug}/{prod_slug}', [FrontController::class, 'productView']);
+Route::get('/product/{slug}', [FrontController::class, 'eachProdView']);
+Route::post('/search-products', [FrontController::class, 'searchProducts']);
 
 // ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
 // All other routes are handled by React Router
