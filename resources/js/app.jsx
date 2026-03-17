@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Frontend from './components/Frontend';
+import Shop from './components/Shop';
 import Categories from './components/Categories';
 import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Frontend />} />
+                <Route path="/shop" element={<Shop />} />
                 <Route path="/category" element={<Categories />} />
                 <Route path="/view-category/:slug" element={<Products />} />
                 <Route path="/view-product/:slug" element={<ProductDetail />} />
