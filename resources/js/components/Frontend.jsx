@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 lg:px-20">
+  <header className="flex items-center justify-between whitespace-nowrap border-b border-primary/10 px-6 py-4 lg:px-20">
     <div className="flex items-center gap-8">
       <div className="flex items-center gap-3 text-slate-900">
         <div className="text-primary">
@@ -11,10 +12,9 @@ const Navbar = () => (
         <h2 className="font-display text-xl font-bold leading-tight tracking-tight">Nyanopan</h2>
       </div>
       <nav className="hidden md:flex items-center gap-9">
-        <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
-        <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Artisans</a>
-        <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Story</a>
-        <a className="text-slate-700 text-sm font-medium hover:text-primary transition-colors" href="#">Journal</a>
+        <Link to="/shop" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Shop</Link>
+        <Link to="/about" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">About</Link>
+        <Link to="/contact" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Contact</Link>
       </nav>
     </div>
     <div className="flex flex-1 justify-end gap-4 lg:gap-6">
@@ -30,12 +30,12 @@ const Navbar = () => (
         </div>
       </label>
       <div className="flex gap-2">
-        <button className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
+        <Link to="/cart" className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
           <span className="material-symbols-outlined">shopping_bag</span>
-        </button>
-        <button className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
+        </Link>
+        <Link to="/login" className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
           <span className="material-symbols-outlined">person</span>
-        </button>
+        </Link>
       </div>
     </div>
   </header>
@@ -75,12 +75,12 @@ const Hero = () => (
           </p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <button className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95">
+          <Link to="/shop" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95">
             Shop Collection
-          </button>
-          <button className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-white border-2 border-primary/20 text-slate-900 text-base font-bold hover:bg-primary/5 transition-colors active:scale-95">
+          </Link>
+          <Link to="/about" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-white border-2 border-primary/20 text-slate-900 text-base font-bold hover:bg-primary/5 transition-colors active:scale-95">
             Our Story
-          </button>
+          </Link>
         </div>
       </motion.div>
     </div>
