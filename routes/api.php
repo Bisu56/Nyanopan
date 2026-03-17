@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Public API Routes
 Route::get('/get-category', [frontendController::class, 'getCategory']);
+Route::get('/get-products', [frontendController::class, 'getProducts']);
 Route::get('/view-category/{slug}', [frontendController::class, 'viewCategory']);
 Route::get('/view-product/{slug}', [frontendController::class, 'eachProdView']);
 Route::get('/cart', [CartController::class, 'viewCartApi']);
