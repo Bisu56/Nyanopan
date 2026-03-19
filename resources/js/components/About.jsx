@@ -17,7 +17,7 @@ const About = () => {
         </div>
 
         <section className="max-w-4xl mx-auto px-6 py-12 text-center">
-          <p className="text-lg lg:text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+          <p className="text-lg lg:text-xl leading-relaxed text-slate-800">
             At Nyanopan, every piece tells a story of heritage, patience, and skill. Our artisans in Nepal preserve the ancient tradition of wet-felting, transforming raw wool into beautiful, sustainable art. We believe in the power of hand-crafted goods to connect people across continents.
           </p>
           <div className="mt-8 flex justify-center gap-2 text-primary">
@@ -27,63 +27,63 @@ const About = () => {
           </div>
         </section>
 
-        <section className="px-6 lg:px-40 py-16 bg-primary/5">
-          <h2 className="text-3xl font-bold mb-12 text-center">Meet the Artisans</h2>
+        <section className="px-6 lg:px-40 py-16 bg-white">
+          <h2 className="text-3xl font-bold mb-12 text-center text-slate-900">Meet the Artisans</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/10">
+            <div className="bg-slate-50 p-4 rounded-xl shadow-sm border border-slate-200">
               <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-slate-200" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTY-AyQAo_Y2W0m2DWZsyMUBEITCuxkdwhLSwZ8pKPOVRf4_NJGFHzYvP1gXLvz-_2vh2Z9ggA9hmmT3LFRKnv0_U5ZnpkXMqF_a_5hGZSvfOQQHeh6QvWDlerlxLcqXwY2xd7w_RXT2p2jsxnLIqDybCmpNmjJn6-LjrsYGBge8VkRHqnGVbBd-HPHhzM8zjfUZIzBJxxKT_kWq-UgxlVD3AMX_3rCY9VC0ko-xIKLMME4IwQDlC28AKgXzPfH0MS5RIqDl1sov4")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-              <h3 className="text-xl font-bold">Maya Devi</h3>
+              <h3 className="text-xl font-bold text-slate-900">Maya Devi</h3>
               <p className="text-primary font-medium text-sm mb-3">Master Felter - 15 Years Experience</p>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-700 text-sm leading-relaxed">
                 Maya specializes in the complex shaping of our signature pet caves. She learned the craft from her mother and now leads our training workshops.
               </p>
             </div>
-            <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/10">
+            <div className="bg-slate-50 p-4 rounded-xl shadow-sm border border-slate-200">
               <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-slate-200" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHzPCbsSr2YSdFNcmawnBvwgTc7fotUm-UNyI5MnU-DEbJY6qK4s3ojFK8fp8qG9eiUNZQHlu_h1tfGOnUEUaJGEmTuU2iEEABxClW7N-1KDywlZ9zbiveczvkADzaMnNW6zR0vyZHJDPxk84xRv5meMzD99NJ21LpOLsrYpTJ39ReSImnJyrxbSdgOxJBLr0Sv6un-2A5H2WTEX9L3-FjMOG-mBufARHCkQNjszIvjCPyPr-YKLY8GyvkQIzDdo2Eh3rrlFvW1U8")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-              <h3 className="text-xl font-bold">Rajesh Thapa</h3>
+              <h3 className="text-xl font-bold text-slate-900">Rajesh Thapa</h3>
               <p className="text-primary font-medium text-sm mb-3">Dyeing Specialist</p>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-700 text-sm leading-relaxed">
                 Rajesh is the master of colors. He uses eco-friendly, AZO-free dyes to create the vibrant palettes that define Nyanopan's modern aesthetic.
               </p>
             </div>
-            <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/10">
+            <div className="bg-slate-50 p-4 rounded-xl shadow-sm border border-slate-200">
               <div className="aspect-square rounded-lg overflow-hidden mb-4 bg-slate-200" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDj7sSGnh8qDtDEjxG31_CYyZ-sqeKYW3JEOXPs0XQsTZ8IK84ZiGfoVnEMuV9LZYvCGpdc0CNeCHMahPS5UZrTlKfyg1P2ziGN7VaUf3EWqWCifofEmV68kjbsQe0ONPYmLWtylg679Y2RSkB54QKfVnmrHvIDec9Bvh0vqrycP3OpTGdF7jKSMNaTqld8q4BIDZz5DN4v819-gsDNwOENU2FZcWcl5ttgoC8wxE1d7hFi5TAg_rJwLSpaS4Hil2D4H3R0gJh9M3w")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-              <h3 className="text-xl font-bold">Sunita Gurung</h3>
+              <h3 className="text-xl font-bold text-slate-900">Sunita Gurung</h3>
               <p className="text-primary font-medium text-sm mb-3">Needle-Felting Expert</p>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-700 text-sm leading-relaxed">
                 Sunita focuses on the intricate details. Her steady hand adds the final decorative touches that make each felted toy unique and full of character.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="px-6 lg:px-40 py-20">
+        <section className="px-6 lg:px-40 py-20 bg-slate-50">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">The Ancient Art of Wet-Felting</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-slate-900">The Ancient Art of Wet-Felting</h2>
+              <p className="text-lg text-slate-700 mb-6 leading-relaxed">
                 Wet-felting is one of the oldest forms of textile creation. It requires nothing but raw wool, warm water, soap, and the strength of the artisan's hands.
               </p>
               <ul className="space-y-4">
                 <li className="flex gap-4">
                   <span className="flex-none w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</span>
                   <div>
-                    <h4 className="font-bold">Layering</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Loose wool fibers are layered in alternating directions to create strength.</p>
+                    <h4 className="font-bold text-slate-900">Layering</h4>
+                    <p className="text-sm text-slate-600">Loose wool fibers are layered in alternating directions to create strength.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <span className="flex-none w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</span>
                   <div>
-                    <h4 className="font-bold">Agitation</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Warm soapy water is applied, and the wool is rubbed and rolled repeatedly.</p>
+                    <h4 className="font-bold text-slate-900">Agitation</h4>
+                    <p className="text-sm text-slate-600">Warm soapy water is applied, and the wool is rubbed and rolled repeatedly.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
                   <span className="flex-none w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</span>
                   <div>
-                    <h4 className="font-bold">Fulling</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">The fibers shrink and lock together, creating a dense, durable material that lasts for years.</p>
+                    <h4 className="font-bold text-slate-900">Fulling</h4>
+                    <p className="text-sm text-slate-600">The fibers shrink and lock together, creating a dense, durable material that lasts for years.</p>
                   </div>
                 </li>
               </ul>
@@ -105,9 +105,9 @@ const About = () => {
           </div>
         </section>
 
-        <section className="px-6 lg:px-40 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-4">Own a Piece of History</h2>
-          <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">Discover our collection of handmade felted products, each crafted with love and tradition.</p>
+        <section className="px-6 lg:px-40 py-20 text-center bg-white">
+          <h2 className="text-3xl font-bold mb-4 text-slate-900">Own a Piece of History</h2>
+          <p className="text-slate-700 mb-8 max-w-xl mx-auto">Discover our collection of handmade felted products, each crafted with love and tradition.</p>
           <Link to="/shop" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all">
             Shop the Collection
             <span className="material-symbols-outlined">arrow_forward</span>

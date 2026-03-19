@@ -27,7 +27,7 @@ const Navbar = () => {
           <h2 className="font-display text-xl font-bold leading-tight tracking-tight">Nyanopan</h2>
         </Link>
         <nav className="hidden md:flex items-center gap-9">
-          <Link to="/category" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Shop</Link>
+          <Link to="/shop" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Shop</Link>
           <Link to="/about" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Story</Link>
           <Link to="/contact" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Contact</Link>
         </nav>
