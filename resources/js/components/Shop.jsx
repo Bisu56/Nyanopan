@@ -3,31 +3,39 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Navbar = () => (
-  <header className="flex items-center justify-between border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4 sticky top-0 z-50">
+  <header className="flex items-center justify-between whitespace-nowrap border-b border-primary/10 px-6 py-4 lg:px-20">
     <div className="flex items-center gap-8">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 text-slate-900">
         <div className="text-primary">
-          <span className="material-symbols-outlined text-4xl">eco</span>
+          <span className="material-symbols-outlined text-3xl">park</span>
         </div>
-        <h2 className="text-xl font-bold leading-tight tracking-tight">Nyanopan</h2>
+        <h2 className="font-display text-xl font-bold leading-tight tracking-tight">Nyanopan</h2>
       </div>
-      <nav className="hidden md:flex items-center gap-8">
-        <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop</Link>
-        <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-        <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+      <nav className="hidden md:flex items-center gap-9">
+        <Link to="/shop" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Shop</Link>
+        <Link to="/about" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">About</Link>
+        <Link to="/contact" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Contact</Link>
       </nav>
     </div>
-    <div className="flex flex-1 justify-end gap-6 items-center">
-      <label className="hidden lg:flex items-center bg-primary/10 rounded-xl px-4 py-2 w-64">
-        <span className="material-symbols-outlined text-primary mr-2">search</span>
-        <input className="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-primary/60" placeholder="Search treasures..." type="text"/>
+    <div className="flex flex-1 justify-end gap-4 lg:gap-6">
+      <label className="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+        <div className="flex w-full flex-1 items-stretch rounded-xl h-full">
+          <div className="text-primary flex bg-primary/10 items-center justify-center pl-4 rounded-l-xl">
+            <span className="material-symbols-outlined text-xl">search</span>
+          </div>
+          <input 
+            className="form-input flex w-full min-w-0 flex-1 border-none bg-primary/10 text-slate-900 focus:ring-0 h-full placeholder:text-primary/60 px-4 rounded-r-xl pl-2 text-base font-normal" 
+            placeholder="Search crafts..." 
+          />
+        </div>
       </label>
-      <div className="flex gap-4 items-center">
-        <Link to="/cart" className="relative p-2 hover:bg-primary/10 rounded-full transition-colors">
+      <div className="flex gap-2">
+        <Link to="/cart" className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
           <span className="material-symbols-outlined">shopping_bag</span>
-          <span className="absolute top-0 right-0 bg-primary text-white text-[10px] rounded-full size-4 flex items-center justify-center">3</span>
         </Link>
-        <div className="size-10 rounded-full bg-cover bg-center border-2 border-primary/20" style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwgg7P2QM3NZPShldylo3VYJEpFAChbPPcAK4XKcc4-Ha5-eHsdr2bFzePUXkmeDAeyGqDRgtJbQfUM_nikuldg2ZzFSkJuzNg_0uIYeHw4NPYjgEZ0202ycHtp2N1oz3Ho1Fudvgo2dALspIj6CfYveEU9ERlZop28LiTrIpf4iWZ4o6Oi8Vqwm5niJJSfmkpjzhZv3oPM4sXQ0GXI0jZs9MBE2DeeWub-YGPZ591gFrnTWmJrfGAx0WjlNFWasJwiVl78ycISmo')"}}></div>
+        <Link to="/login" className="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-slate-900 hover:bg-primary/20 transition-colors">
+          <span className="material-symbols-outlined">person</span>
+        </Link>
       </div>
     </div>
   </header>
@@ -208,7 +216,7 @@ const Shop = () => {
         <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <h2 className="text-3xl font-bold mb-4">Every stitch tells a story</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 font-sans leading-relaxed">
+            <p className="text-lg text-slate-800 mb-8 font-sans leading-relaxed">
               Nyanopan brings together rural Nepalese artisans and sustainable Himalayan wool to create timeless pieces for your modern home. Your purchase supports fair-trade livelihoods and keeps traditional crafts alive.
             </p>
             <div className="flex flex-wrap gap-8">
