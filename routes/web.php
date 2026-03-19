@@ -9,11 +9,16 @@ use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\contactComplains;
 use App\Http\Controllers\frontend\UserController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// Auth Routes - must be before catch-all
-Auth::routes();
+// Auth Routes - handled by React SPA
+// Skip Laravel auth routes - React handles login/register
+// Auth::routes();
+
+// Custom login/register routes for React API calls
+Route::post('/api/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('/api/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
+Route::post('/api/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 // ==================== AUTHENTICATED USER ROUTES ====================
 Route::middleware(['auth'])->group(function () {
