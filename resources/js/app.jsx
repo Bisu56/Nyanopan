@@ -11,6 +11,7 @@ import Checkout from './components/Checkout';
 import Orders from './components/Orders';
 import Contact from './components/Contact';
 import About from './components/About';
+import Login from './components/Login';
 
 import './bootstrap';
 
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="/my-order" element={<Orders />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
