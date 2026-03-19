@@ -5,12 +5,12 @@ import axios from 'axios';
 const Navbar = () => (
   <header className="flex items-center justify-between whitespace-nowrap border-b border-primary/10 px-6 py-4 lg:px-20">
     <div className="flex items-center gap-8">
-      <div className="flex items-center gap-3 text-slate-900">
+      <Link to="/" className="flex items-center gap-3 text-slate-900">
         <div className="text-primary">
           <span className="material-symbols-outlined text-3xl">park</span>
         </div>
         <h2 className="font-display text-xl font-bold leading-tight tracking-tight">Nyanopan</h2>
-      </div>
+      </Link>
       <nav className="hidden md:flex items-center gap-9">
         <Link to="/shop" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">Shop</Link>
         <Link to="/about" className="text-slate-700 text-sm font-medium hover:text-primary transition-colors">About</Link>
