@@ -64,8 +64,8 @@ Route::middleware(['auth', 'isAdmin'])->name('admin.')->group(function () {
     Route::get('/message', [contactComplains::class, 'viewcomplains'])->name('messages');
 
     // Settings
-    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
-    Route::post('/update-settings', [SettingsController::class, 'update']);
+    Route::get('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('settings');
+    Route::post('/update-settings', [App\Http\Controllers\Admin\SettingsController::class, 'update']);
 });
 
 // ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
