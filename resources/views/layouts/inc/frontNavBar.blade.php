@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top" style="background: linear-gradient(135deg, #1a5f2a 0%, #2e7d32 50%, #43a047 100%);">
   <div class="container-fluid  navbar-default ">
-     <a class="navbar-brand text-white fw-bold" href="{{url('/')}}">🌿 Nyanopan</a>
+     <a class="navbar-brand text-white fw-bold" href="{{url('/')}}">🌿 {{ $site_settings['site_name'] ?? 'Nyanopan' }}</a>
    
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
