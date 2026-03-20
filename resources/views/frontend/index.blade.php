@@ -17,7 +17,16 @@
     <div class="py-5">
         <div class="container">
             <div class="row">
-               
+                @forelse($category->take(3) as $cat)
+                    <a href="{{url('/category/'.$cat->slug)}}" class="card col-md-4 " style="border:none;">
+                        <div class="card-body zoom postion-relative">
+                            <img src="{{asset('upload/category/'.$cat->image)}}"  class="w-100 lazy rounded" height="200px"  onerror="this.src='https://via.placeholder.com/400x200?text=Category'" alt="{{$cat->name}}">
+                            <div class="text-light position-absolute top-50 start-50 translate-middle">
+                                <h4 style="letter-spacing:3px; ">{{$cat->name}}</h4>
+                            </div>
+                        </div>
+                    </a>
+                @empty
                     <a  href="{{url('/category')}}" class="card col-md-4 " style="border:none;">
                         <div class="card-body zoom postion-relative">
                             <img src="{{asset('images/accessories.jpg')}}"  class="w-100 lazy rounded" height="200px"   alt="">
@@ -42,7 +51,7 @@
                             </div>
                         </div>
                     </a>
-                
+                @endforelse
             </div>
         </div>
     </div>

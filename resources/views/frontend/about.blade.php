@@ -13,17 +13,12 @@
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-6">
-                <img src="{{asset('images/nyanopan-logo.png')}}" alt="Nyanopan" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Nyanopan'">
+                <img src="{{isset($site_settings['about_image']) ? asset('upload/settings/'.$site_settings['about_image']) : asset('images/nyanopan-logo.png')}}" alt="{{ $site_settings['site_name'] ?? 'Nyanopan' }}" class="img-fluid rounded shadow" onerror="this.src='https://via.placeholder.com/600x400?text=Nyanopan'">
             </div>
             <div class="col-lg-6">
-                <h1 class="fw-bold mb-4">Welcome to Nyanopan</h1>
+                <h1 class="fw-bold mb-4">{{ $site_settings['about_title'] ?? 'Welcome to Nyanopan' }}</h1>
                 <p class="lead text-muted">
-                    Your one-stop destination for quality products at unbeatable prices.
-                </p>
-                <p>
-                    At Nyanopan, we believe in providing our customers with the best shopping experience possible. 
-                    Founded with a vision to revolutionize online shopping, we curate the finest selection of products 
-                    across various categories to meet your every need.
+                    {{ $site_settings['about_description'] ?? 'Your one-stop destination for quality products at unbeatable prices.' }}
                 </p>
             </div>
         </div>
@@ -70,8 +65,7 @@
                     <div class="card-body py-5 text-center">
                         <h2 class="mb-3">Our Mission</h2>
                         <p class="mb-0 fs-5">
-                            To provide exceptional products and outstanding customer service, 
-                            making every shopping experience with Nyanopan a memorable one.
+                            {{ $site_settings['about_mission'] ?? 'To provide exceptional products and outstanding customer service, making every shopping experience with Nyanopan a memorable one.' }}
                         </p>
                     </div>
                 </div>

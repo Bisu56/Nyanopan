@@ -27,7 +27,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        $settings = Setting::all()->pluck('value', 'key')->toArray();
-        view()->share('site_settings', $settings);
+        try {
+            $settings = Setting::all()->pluck('value', 'key')->toArray();
+            view()->share('site_settings', $settings);
+        } catch (\Exception $e) {
+            view()->share('site_settings', []);
+        }
     }
 }
