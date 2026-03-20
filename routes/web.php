@@ -66,6 +66,12 @@ Route::middleware(['auth', 'isAdmin'])->name('admin.')->group(function () {
 
 // ==================== PUBLIC / FRONTEND ROUTES (React SPA) ====================
 // All routes are handled by React Router
+Route::get('/login', function () {
+    return view('welcome');
+});
+Route::get('/register', function () {
+    return view('welcome');
+});
 Route::get('/{any}', function () {
     return view('welcome');
 })->where('any', '^(?!api).*$');
