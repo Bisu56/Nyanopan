@@ -5,20 +5,16 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\frontendController as AdminFrontendController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\contactComplains;
 use App\Http\Controllers\frontend\UserController;
 use Illuminate\Support\Facades\Route;
 
-// Auth Routes - handled by React SPA
-// Skip Laravel auth routes - React handles login/register
-// Auth::routes();
-
-// Custom login/register routes for React API calls
-Route::post('/api/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
-Route::post('/api/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
-Route::post('/api/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
+Route::post('/api/login', [AuthController::class, 'login']);
+Route::post('/api/register', [AuthController::class, 'register']);
+Route::post('/api/logout', [AuthController::class, 'logout']);
 
 // ==================== AUTHENTICATED USER ROUTES ====================
 Route::middleware(['auth'])->group(function () {
